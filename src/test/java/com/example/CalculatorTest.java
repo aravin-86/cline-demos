@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 public class CalculatorTest {
 
     private Calculator calculator;
@@ -42,5 +43,10 @@ public class CalculatorTest {
     @Test
     void testSubtractWithZero() {
         assertEquals(7, calculator.subtract(7, 0));
+    }
+
+    @Test
+    public void testMultiply() {
+        assertEquals(6, calculator.multiply(2, 3));
     }
 }
