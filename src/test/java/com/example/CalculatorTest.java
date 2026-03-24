@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 
 public class CalculatorTest {
@@ -48,5 +50,14 @@ public class CalculatorTest {
     @Test
     public void testMultiply() {
         assertEquals(6, calculator.multiply(2, 3));
+    }
+
+    @Test
+    public void testDivideByZero() {
+        Calculator calc = new Calculator();
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            calc.divide(5, 0);
+        });
+        assertEquals("Division by zero is not allowed", exception.getMessage());
     }
 }
