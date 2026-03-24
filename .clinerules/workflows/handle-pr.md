@@ -2,7 +2,7 @@ You have access to the `gh` terminal command. I already authenticated it for you
 
 <detailed_sequence_of_steps>  
 
-# GitHub PR Review Process - Detailed Sequence of Steps  
+# GitHub PR Review Process - Detailed Sequence of Steps
 
 ## 1. Gather PR Information  
 1. Get the PR title, description, and comments:      

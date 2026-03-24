@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
-
 public class CalculatorTest {
 
     private Calculator calculator;
@@ -50,6 +48,16 @@ public class CalculatorTest {
     @Test
     public void testMultiply() {
         assertEquals(6, calculator.multiply(2, 3));
+    }
+
+    @Test
+    void testMultiplyWithZero() {
+        assertEquals(0, calculator.multiply(7, 0));
+    }
+
+    @Test
+    void testDivideWithValidInput() {
+        assertEquals(2, calculator.divide(6, 3));
     }
 
     @Test
